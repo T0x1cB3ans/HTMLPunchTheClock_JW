@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+  
+.main{
+    /* background-color: rgb(38, 48, 118); */
+    height: 100vh;
+}
+
+img{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    max-width: none;
+    max-height: none;
+    z-index: -1;
+}
+
+h1{
+    color: rgb(213, 84, 19);
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-size: 32px;
+    /* 400 - 700 weight */
+    font-style: normal;
+    text-align: center;
+    margin-right: 5vw;
+    margin-left: 5vw;
+} 
+
+h2{
+    color: rgb(215, 175, 28);
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-size: 32px;
+    /* 400 - 700 weight  */
+    font-style: normal;
+    text-align: center;
+   
+} 
+
+h3{
+    color: rgb(213, 84, 19);
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-size: 32px;
+    /* 400 - 700 weight  */
+    font-style: normal;
+    text-align: center;
+    margin-top: 10vh;
+
+} 
+
+h4{
+    color: rgb(215, 175, 28);
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-size: 32px;
+    /* 400 - 700 weight  */
+    font-style: normal;
+    text-align: center;
+    margin-top: 20vh;
+} 
+
+
+h5{
+    color: rgb(215, 175, 28);
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-size: 46px;
+    /* 400 - 700 weight  */
+    font-style: normal;
+    text-align: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+} 
+
+
+.rowOne{
+    display: flex;
+    height: 25vh;
+    /* background-color: rgb(23, 23, 97); */
+}
+
+.topLeft{
+    flex: 1;
+    /* background-color: aqua; */
+}
+
+.topCenter{
+    flex: 1;
+    /* background-color: beige; */
+}
+
+.topRight{
+    flex: 1;
+    /* background-color: blueviolet; */
+}
+
+.rowTwo{
+    display: flex;
+    height: 35vh;
+    /* background-color: rgb(28, 28, 113); */
+}
+
+.middleLeft{
+    flex: 1;
+    /* background-color: beige; */
+}
+
+.middleCenter{
+    flex: 1;
+    /* background-color: blueviolet; */
+}
+
+.middleRight{
+    flex: 1;
+    /* background-color: aqua; */
+}
+
+.rowThree{
+    position: relative;
+    height: 50vh;
+}
+
+#land {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#truck {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 55%;
+    z-index: 2;
+}
+
+#can {
+    position: fixed;
+    bottom: 0;
+    left: 40%;
+    width: 60%;
+    transform: translate(-50%, 100%);
+    transition: transform 5s linear;
+    visibility: hidden;                 /* hidden at the start */
+    z-index: 3;
+}
+
+#can.show {
+    transform: translate(-50%, 0);
+    visibility: visible;                /* appears the moment it starts rising */
+}
+
+
+h1:hover +h2{
+    opacity: 1;
+    color: darkgoldenrod;
+    transition: all 1s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    h5{
+        font-size: 62px;
+        margin-left: 28vw;
+        margin-right: 28vw;
+    }
+    h1{
+        font-size: 56px;
+        margin-bottom: 15vh;
+        margin-top: 5vh;
+    }
+    h2{
+        font-size: 56px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    h3{
+        font-size: 56px;
+        margin-right: 10vw;
+    }
+    h4{
+        font-size: 56px;
+        margin-right: 20vw;
+        margin-left: 20vw;
+        margin-top: 3vh;
+    }
+}
+
+@media (min-width: 1280px) {
+    #truck{
+        width: 30%;
+    }
+
+    #can{
+        width: 25%;
+        left: 30%;
+    }
+    /* #land{
+        position: absolute;
+        bottom: 20vh;
+    } */
+}
